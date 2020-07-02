@@ -6,7 +6,7 @@ Authors@R:
            family = "Novak",
            role = c("aut", "cre"),
            email = "davidnovakcz@hotmail.com"))
-Description: Implements filtering, prediction and smoothing algorithms on HMMs via recursion and the Viterbi algorithm via dynamic programming in R.
+Description: Implements filtering, prediction and smoothing algorithms on HMMs via recursion and the Viterbi algorithm via dynamic programming.
 License: `use_mit_license()`
 Depends: Matrix
 Encoding: UTF-8
