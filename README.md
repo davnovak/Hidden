@@ -22,7 +22,7 @@ Then, load the package by entering
 
 ## Run
 
-Let's take the classical example: you're a hard-working PhD student confined to a basement office, on a diet of coffee and instant ramen noodles.
+Let's take the classic example: you're a hard-working PhD student confined to a basement office, on a diet of coffee and instant ramen noodles.
 You have no idea what the weather outside is.
 Except that your advisor arrives at work everyday, either with an umbrella or without (an observable state variable).
 That gives you a hint as to whether it is raining outside or not (a hidden state variable).
