@@ -77,6 +77,8 @@ To find more, just pull up the documentation for those algorithms that I just li
 ?Viterbi.HiddenMarkovModel
 ```
 
+Additionally use `print(H)` to view the internals of your model and `PrintStats(H)` to see the results of what you have already computed.
+
 Have fun.
 
 
