@@ -1,0 +1,15 @@
+Package: hidden
+Title: Hidden Markov Model simulator
+Version: 0.1.0
+Authors@R: 
+    person(given = "David",
+           family = "Novak",
+           role = c("aut", "cre"),
+           email = "davidnovakcz@hotmail.com"))
+Description: Implements filtering, prediction and smoothing algorithms on HMMs via recursion and the Viterbi algorithm via dynamic programming in R.
+License: `use_mit_license()`
+Depends: Matrix
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.0
