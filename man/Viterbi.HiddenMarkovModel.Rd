@@ -10,8 +10,6 @@
 \item{H}{\code{HiddenMarkovModel} object, as created by the constructor function \code{HiddenMarkovModel}.}
 
 \item{idx.end}{an index of the time points where path terminates.}
-
-\item{verbose}{logical; whether to report progression of the Viterbi algorithm.}
 }
 \description{
 Applies the Viterbi algorithm using dynamic programming on a hidden Markov model.
