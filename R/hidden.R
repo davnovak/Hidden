@@ -54,7 +54,7 @@ HiddenMarkovModel <- function(Tr, Em, X0, hidden_states = NULL, observables = NU
   H$n_observables   <- ncol(Em)
   H$hidden_states   <- if (is.null(hidden_states)) { paste0('x', 1:H$n_hidden_states) } else { hidden_states }
   H$observables     <- if (is.null(observables))   { paste0('e', 1:H$n_observables) }   else { observables }
-  ResetStats(H)
+  H$probs           <- list()
   colnames(H$Em)    <- H$observables
   colnames(H$Tr)    <- rownames(H$Tr) <- rownames(H$Em) <- rownames(H$X0) <- H$hidden_states
 
