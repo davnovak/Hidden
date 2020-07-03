@@ -321,7 +321,6 @@ MostLikelyPath <- Viterbi <- function(H, ...) UseMethod('Viterbi', H)
 #'
 #' @param H \code{HiddenMarkovModel} object, as created by the constructor function \code{HiddenMarkovModel}.
 #' @param idx.end an index of the time points where path terminates.
-#' @param verbose logical; whether to report progression of the Viterbi algorithm.
 #'
 Viterbi.HiddenMarkovModel <- function(H, idx.end = H$n_observations) {
 
