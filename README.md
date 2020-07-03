@@ -24,10 +24,10 @@ Then, load the package by entering
 
 Let's take the classic example: you're a hard-working PhD student confined to a basement office, on a diet of coffee and instant ramen noodles.
 You have no idea what the weather outside is.
-Except that your advisor arrives at work everyday, either with an umbrella or without (an observable state variable).
+Except that your advisor arrives to work everyday, either with an umbrella or without (an observable state variable).
 That gives you a hint as to whether it is raining outside or not (a hidden state variable).
 
-We suppose that rain can be modelled as a 1st-order Markov process (hidden state at day *t* is dependent only on the hidden state at day *t-1*) and that the sensory assumption hold true (observable state is entirely determined by the hidden state at the same time and conditionally independent of the hidden state and the observable state at any other time).
+We suppose that rain can be modelled as a 1st-order Markov process (hidden state on day *t* is dependent only on the hidden state on day *t-1*) and that the sensory assumption hold true (observable state is entirely determined by the hidden state at the same time and conditionally independent of the hidden state and the observable state at any other time).
 
 We use the transition model (a matrix) to tell us how probable rain is on day *t* given the probability distribution of the hidden state variable (of *'Rain'* and *'No Rain'*) at *t-1*.
 We use the emission model (also a matrix) to tell us how probable it is that the advisor bring an umbrella on day *t* given the probability distribution of the hidden state variable on the same day (*t*).
