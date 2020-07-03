@@ -300,7 +300,7 @@ Smooth.HiddenMarkovModel <- function(H, idcs, verbose = TRUE) {
   for (idx in idcs) {
     prob <- H$probs[[idx]][['filtered']] * H$probs[[idx]][['backward']]
     prob <- prob / sum(prob)
-    if (verbose) message(paste0('Smoothed probs at time t=', idx, ': ', paste(prob, collapse = ', ')))
+    if (verbose) message(paste0('Smoothed probs at time t=', idx, ': ', paste(round(prob, digits = 4), collapse = ', ')))
     H$probs[[idx]][['smoothed']] <- prob
   }
   invisible(H)
