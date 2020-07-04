@@ -86,12 +86,35 @@ print.HiddenMarkovModel <- function(H) {
 
 #' Plot a HiddenMarkovModel object diagram
 #'
-#' This method is not implemented.
-#' I might or might not implement it.
+#' Plot the transition and observation model of a \code{HiddenMarkovModel} object using package \code{igraph}.
 #'
 plot.HiddenMarkovModel <- function(H, ...) {
 
-  message('Plotting not implemented yet')
+  # Hidden states edges
+  edges1   <- do.call(rbind, lapply(H$hidden_states, function(s1) do.call(rbind, lapply(H$hidden_states, function(s2) c(s1, s2)))))
+  weights1 <- apply(edges1, 1, function(s) H$Tr[s[1], s[2]])
+
+  # Observables edges
+  edges2   <- do.call(rbind, lapply(H$hidden_states, function(s1) do.call(rbind, lapply(H$observables, function(s2) c(s1, s2)))))
+  weights2 <- apply(edges2, 1, function(s) H$Em[s[1], s[2]])
+
+  # Weighted graph
+  g <- graph_from_edgelist(rbind(edges1, edges2))
+  E(g)$weights <- c(weights1, weights2)
+  V(g)$color <- c(rep('lightblue', ncol(edges1)), rep('lightgreen', ncol(edges1)))
+
+  plot(g, edge.label = E(g)$weights,
+       edge.label.cex = 1,
+       edge.label.color = 'black',
+       edge.label.family = 'Helvetica',
+       edge.curved = TRUE,
+       vertex.label.dist = 2,
+       vertex.label.cex = 1.2,
+       vertex.label.family = 'Helvetica',
+       vertex.label.font = 2,
+       vertex.size = 5,
+       layout = layout.gem(g))
+
   invisible(H)
 }
 

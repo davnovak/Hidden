@@ -7,6 +7,5 @@
 \method{plot}{HiddenMarkovModel}(H, ...)
 }
 \description{
-This method is not implemented.
-I might or might not implement it.
+Plot the transition and observation model of a \code{HiddenMarkovModel} object using package \code{igraph}.
 }

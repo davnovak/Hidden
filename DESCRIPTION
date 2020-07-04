@@ -8,7 +8,7 @@ Authors@R:
            email = "davidnovakcz@hotmail.com")
 Description: Implements filtering, prediction and smoothing algorithms on HMMs via recursion and the Viterbi algorithm via dynamic programming.
 License: `use_mit_license()`
-Depends: Matrix
+Depends: Matrix, igraph
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
