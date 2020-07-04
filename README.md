@@ -77,7 +77,11 @@ To find more, just pull up the documentation for those algorithms that I just li
 ?Viterbi.HiddenMarkovModel
 ```
 
-Additionally use `print(H)` to view the internals of your model and `PrintStats(H)` to see the results of what you have already computed.
+Additionally use `print(H)` to view the internals of your model and `PrintStats(H)` to see the results of what you have already computed (that's important).
+To view a plot of the transition and observation model that form your HMM, simply call `plot(H)`.
+This generates a plot like the one shown below.
+
+![HMM plot](HMM_plot.png)
 
 Have fun.
 
